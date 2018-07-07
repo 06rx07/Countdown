@@ -4,22 +4,29 @@
 <head>
     <meta charset='utf-8'>
     <title>Countdown</title>
+    <style>
+        select {
+            font-size: 1.5em;
+            width: 100px;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <h1 id='show-clock'></h1>
 
-    <select id="year-select"></select>
-    <select id="month-select"></select>
-    <select id="day-select"></select>
-    <select id="hour-select"></select>
-    <select id="minite-select"></select>
-    <select id="second-select"></select>
+    <select id="year-select" onchange="setDaySelect(); updateResult();"></select>
+    <select id="month-select" onchange="setDaySelect(); updateResult();"></select>
+    <select id="day-select" onchange="updateResult()"></select>
+    <select id="hour-select" onchange="updateResult()"></select>
+    <select id="minute-select" onchange="updateResult()"></select>
+    <select id="second-select" onchange="updateResult()"></select>
     <h1 id="result-wrapper"></h1>
 
     <!-- <script src='./go-steps.js'></script> -->
     <script src='./clock.js'></script>
-    <!-- <script src='./countdown.js'></script> -->
+    <script src='./countdown.js'></script>
 </body>
 
 </html>
